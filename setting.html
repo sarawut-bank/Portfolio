@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../template/static/css/setting.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit&family=Lobster&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>Twittเต๋อ</title>
+</head>
+
+<body style="background-color: #ebebeb;">
+
+
+    <div id="container" class="row">
+
+        <!-------------------กล่องซ้าย-------------------->
+        <div class="box_left" style="width: 20%;">
+
+            <!--โลโก้-->
+            <div class="logo">
+                <img src="../template/static/images/logo.png" alt="">
+            </div>
+
+        </div>
+
+        <!---------------------กล่องกลาง------------------------>
+        <div class="box_middle" style="width: 59%; background: #f4f4f4;">
+
+            <div class="box">
+
+                <!--แถบบน-->
+                <div class="header">
+
+                    <!--ปุ่มกลับ-->
+                    <a class="back" href="../template/index_log.html">
+                        <button class="goback">
+                            <ion-icon name="chevron-back-outline" size="large"></ion-icon>
+                        </button>
+                    </a>
+
+                    <b>ข้อมูลส่วนตัว</b>
+
+                </div>
+                
+                <!--เส้นขีด-->
+                <hr>
+                
+                <!--กล่องรูปโปรไฟล์ และปุ่มแก้ไข-->
+                <div id="top" class="row">
+                    
+                    <!--รูปโปรไฟล์-->
+                    <div class="card">
+                        <img src="">
+                    </div>
+                    
+                    <!--ปุ่มแก้ไข-->
+                    <div id="edit" class="col">
+                        <a href="../template/edit_setting.html">
+                            <button>แก้ไข</button>
+                        </a>
+                    </div>
+        
+                </div>
+                
+                <!--กล่องแสดงข้อมูลต่างๆ-->
+                <div class="input_data">
+
+                    <!--แสดง username-->
+                    <div class="row">
+                        <div class="col">
+                            <a>Username :</a>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    
+                    <!--แสดง ชื่อและนามสกุล-->
+                    <div class="row">
+
+                        <!--ชื่อ-->
+                        <div class="col">
+                            <a>ชื่อ :</a>
+                            <input type="text" class="form-control">
+                        </div>
+                        
+                        <!--นามสุกล-->
+                        <div class="col">
+                            <a>นามสกุล :</a>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    
+                    <!--แสดง เบอร์โทรศัพท์-->
+                    <div class="row">
+                        <div class="col">
+                            <a>เบอร์โทรศัพท์ :</a>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    
+                    <!--แสดง email-->
+                    <div class="row">
+                        <div class="col">
+                            <a>E-mail :</a>
+                            <input type="email" class="form-control">
+                        </div>
+                    </div>
+                    
+                    <!--แสดง email-->
+                    <div class="row">
+                        <div class="col">
+                            <a>Password :</a>
+                            <input type="password" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                
+                <hr>
+
+            </div>
+
+        </div>
+
+        <!----------------------กล่องขวา---------------------->
+        <div class="box_right" style="width: 20%;" align="center">
+
+        </div>
+        
+    </div>
+
+</body>
+
+</html>

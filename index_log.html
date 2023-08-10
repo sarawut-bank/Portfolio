@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../template/static/css/style_indexlog.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit&family=Lobster&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>Twittเต๋อ</title>
+</head>
+
+<body style="background-color: #ebebeb;">
+
+    <!------------------------------------------กล่อง container ครอบทุกส่วนประกอบ------------------------------------->
+    <div id="container" class="row">
+
+        <!-------------------------------------กล่องซ้าย รวมพวกโลโก้ แถบเมนู--------------------------------->
+        <div class="box_left" style="width: 20%;">
+
+            <!--โลโก้-->
+            <div class="logo">
+                <img src="../template/static/images/logo.png" alt="">
+            </div>
+
+            <!--แถบเมนู รวมพวกปุ่มต่างๆ เช่น โปรไฟล์ ตั้งค่า-->
+            <div id="menu" class="col" align="center">
+
+                <!--username-->
+                <div id="show_name" class="row">
+                    <b>Username</b>
+                </div>
+
+                <!--ปุ่มโปรไฟล์-->
+                <div id="show_profile" class="row">
+                    <a href="../template/profile.html">
+                        <button type="button" class="profile_button">
+                            <ion-icon name="person-outline"></ion-icon>
+                            โปรไฟล์
+                        </button>
+                    </a>
+                </div>
+
+                <!--ปุ่มตั้งค่า-->
+                <div id="show_setting" class="row">
+                    <a href="../template/setting.html">
+                        <button type="button" class="setting_button">
+                            <ion-icon name="settings-outline"></ion-icon>
+                            ตั้งค่า
+                        </button>
+                    </a>
+                </div>
+
+                <!--ปุ่มออกจากระบบ-->
+                <div id="show_logout" class="row">
+                    <a href="../template/index.html">
+                        <button type="button" class="logout_button">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                            ออกจากระบบ
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <!---------------------------------------ปิดกล่องซ้าย------------------------------------------------>
+
+
+
+        <!----------------------------กล่องตรงกลาง รวมข้อมูลต่างๆ ช่อง search การโพส-------------------------->
+        <div class="box_middle" style="width: 59%; background: #f4f4f4;">
+
+            <!------------ช่อง search---------->
+            <div align="center">
+                <form class="search">
+                    <button id="search_button" class="rounded-button" type="button">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </button>
+                    <input type="search" placeholder="Search" class="search-input" />
+                </form>
+            </div>
+
+            <!--เส้นขีด-->
+            <hr>
+
+            <!----------กล่องรวมการเขียนโพส----------->
+            <div id="status_post" class="row">
+
+                <!--รูปโปรไฟล์-->
+                <div id="profile_" class="card">
+                    <img src="">
+                </div>
+
+                <!--form รับค่า การเขียนโพส-->
+                <form id="write_post" class="col" align="start">
+
+                    <!--ชื่อผู้ใช้งาน-->
+                    <div class="name">
+                        <b>Username</b>
+                    </div>
+
+                    <!--ช่องสำหรับเขียน tag-->
+                    <div id="tag" class="input-group">
+
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="tag_">#</span>
+                        </div>
+                        <!--ช่องรับค่า tag-->
+                        <input type="text" id="tagg_" class="form-control" placeholder="--หัวข้อ--">
+
+                    </div>
+
+                    <!--ช่องสำหรับเขียนโพส ( textarea รับค่า )-->
+                    <div class="post">
+                        <textarea type="text" placeholder="คุณกำลังคิดอะไรอยู่"></textarea>
+                    </div>
+
+                    <!--ปุ่มโพส-->
+                    <div class="post_button" align="end">
+                        <a href="">
+                            <button class="post_">เต๋อ</button>
+                        </a>
+                    </div>
+
+                </form>
+            </div>
+
+            <!--เส้นขีด-->
+            <hr>
+
+            <!----------กล่องแสดงการโพสของแต่ละ user----------->
+            <div id="post-box" class="row">
+
+                <!--รูปโปรไฟล์-->
+                <div id="profile_" class="card">
+                    <img src="">
+                </div>
+
+                <div id="post" class="col" align="start">
+
+                    <!--ชื่อของผู้ใช้งาน-->
+                    <div class="name">
+                        <b>Username</b>
+                    </div>
+
+                    <!--ช่องสำหรับโชว์ tag-->
+                    <div id="tag" class="input-group">
+
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="_tag">#</span>
+                        </div>
+
+                        <!--สำหรับแสดงค่า-->
+                        <input type="text" id="tagg" class="form-control">
+
+                    </div>
+
+                    <!--โพสของผู้ใช้งาน ช่อง textarea สำหรับรับค่าที่โพส มาแสดง-->
+                    <div class="post">
+                        <textarea type="text" class="post_"></textarea>
+                    </div>
+
+                    <!--การกดไลค์และแสดงความคิดเห็น-->
+                    <div id="activity" class="row" style="width: 22%;">
+
+                        <!--ปุ่มไลค์-->
+                        <div id="like" class="col">
+                            <button id="like_button" type="button">
+                                <ion-icon class="like_logo" name="heart-outline" size="small"></ion-icon>
+                            </button>
+                        </div>
+
+                        <!--input สำหรับแสดงจำนวนไลค์-->
+                        <div id="num_like" class="col">
+                            <input type="text" class="num_l"></input>
+                        </div>
+
+                        <!--ปุ่มคอมเมนท์-->
+                        <div id="comment" class="col">
+                            <button id="comment_button" type="button" onclick="myFunction()">
+                                <ion-icon class="comment_logo" name="chatbubble-outline" size="small"></ion-icon>
+                            </button>
+                        </div>
+
+                        <!--input สำหรับแสดงจำนวนคอมเมนท์-->
+                        <div id="num_comment" class="col">
+                            <input type="text" class="num_c"></input>
+                        </div>
+
+                    </div>
+
+                    <!------กล่องแสดง comment------>
+                    <div id="show_comment" class="row">
+
+                        <!--form การเขียนคอมเมนท์-->
+                        <form id="com" class="row">
+
+                            <!--เส้นขีด-->
+                            <hr>
+
+                            <!--โปรไฟล์-->
+                            <div id="profile_comment" class="card">
+                                <img src="">
+                                <div class="card-body">
+                                </div>
+                            </div>
+
+                            <!--input รับค่า การเขียนคอมเมนท์-->
+                            <div id="comment_write" class="col">
+                                <input type="text" id="write" placeholder="แสดงความคิดเห็น">
+                            </div>
+
+                            <!--ปุ่ม comment-->
+                            <div id="button_com" class="col">
+                                <a href="">
+                                    <button class="but_com">Comment</button>
+                                </a>
+                            </div>
+
+                            <!--เส้นขีด-->
+                            <hr>
+
+                        </form>
+
+                        <!--คอมเมนท์ที่แสดง-->
+                        <div id="comment_view" class="row">
+
+                            <!--รูปโปรไฟล์-->
+                            <div id="profile_comment" class="card">
+                                <img src="">
+                                <div class="card-body">
+                                </div>
+                            </div>
+
+                            <!--รูปโปรไฟล์-->
+                            <div id="comment_text" class="col">
+
+                                <!--ชื่อคนคอมเมนท์-->
+                                <div class="col">
+                                    <b>Username</b>
+                                </div>
+
+                                <!--ช่อง textarea สำหรับแสดงคอมเมนท์-->
+                                <div class="col">
+                                    <textarea type="text" class="com_text"></textarea>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--ปุ่ม *** แก้ไขและลบ-->
+                <div id="edit_button" class="col">
+                    <button id="edit_" onclick="editFunction()">
+                        <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+                    </button>
+                </div>
+
+                <!--ฟอร์มแก้ไขและลบ-->
+                <form id="box_" class="col">
+                    <div class="triangle">
+                    </div>
+                    <div class="col">
+                        <button id="edit_b">
+                            แก้ไข
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button id="del_b">
+                            ลบ
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+
+            <!--เส้นขีด-->
+            <hr>
+
+
+        </div>
+        <!-------------------------------------ปิดกล่องกลาง---------------------------------------->
+
+
+        <!-------------------------กล่องขวา พวก trends แนะนำ--------------------------->
+        <div class="box_right" style="width: 20%;" align="center">
+
+            <div id="box" class="col">
+
+                <!--หัวข้อ-->
+                <div class="col">
+                    <b>Trends for you</b>
+                </div>
+
+                <!--เส้นขีด-->
+                <hr>
+
+                <!--trends ที่ขึ้นแนะนำ-->
+                <div id="trends" class="col" align="start">
+
+                    <div class="trend_1">
+                        <a href="">#ความรัก</a>
+                    </div>
+                    <hr>
+                    <div class="trend_2">
+                        <a href="">#ทั่วไป</a>
+                    </div>
+                    <hr>
+                    <div class="trend_3">
+                        <a href="">#การงาน</a>
+                    </div>
+                    <hr>
+                </div>
+
+            </div>
+        </div>
+        <!--------------------------------ปิดกล่องขวา------------------------------------>
+
+    </div>
+    <!----------------------------------------ปิด container-------------------------------------------------->
+
+    <Script>
+
+        /* script ของ comment (hide/show)*/
+        document.getElementById('show_comment').style.display = "none";
+        function myFunction() {
+            var comment = document.getElementById("show_comment");
+            if (comment.style.display == "none") {
+                comment.style.display = "block";
+            } else {
+                comment.style.display = "none"
+            }
+        }
+
+        /* script ของ edit แก้ไขและลบ (hide/show)*/
+        document.getElementById('box_').style.display = "none";
+        function editFunction() {
+            var edit = document.getElementById("box_");
+            if (edit.style.display == "none") {
+                edit.style.display = "block";
+            } else {
+                edit.style.display = "none"
+            }
+        }
+    </Script>
+    <!--script ใช้ footer-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

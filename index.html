@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../template/static/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit&family=Lobster&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>Twittเต๋อ</title>
+</head>
+
+<body style="background-color: #ebebeb;">
+
+
+    <div id="container" class="row">
+
+        <!----------------------กล่องซ้าย----------------------->
+        <div class="box_left" style="width: 20%;">
+
+            <!--โลโก้-->
+            <div class="logo">
+                <img src="../template/static/images/logo.png" alt="">
+            </div>
+
+        </div>
+
+        <!----------------------กล่องกลาง----------------------->
+        <div class="box_middle" style="width: 59%; background: #f4f4f4;">
+
+            <!--ช่อง search-->
+            <div align="center">
+                <form class="search">
+                    <button id="search_button" class="rounded-button" type="button">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </button>
+                    <input type="search" placeholder="Search" class="search-input" />
+                </form>
+            </div>
+
+            <!--เส้นขีด-->
+            <hr>
+
+            <!-----กล่องแสดงโพสของแต่ละ user------>
+            <div id="post-box" class="row">
+
+                <!--รูปโปรไฟล์-->
+                <div id="profile" class="card">
+                    <img src="">
+                </div>
+
+                <div id="post" class="col" align="start">
+
+                    <!--ชื่อของผู้ใช้งาน-->
+                    <div class="name">
+                        <b>Username</b>
+                    </div>
+
+                    <!--ช่องสำหรับโชว์ tag-->
+                    <div id="tag" class="input-group">
+
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="tag_">#</span>
+                        </div>
+
+                        <!--สำหรับแสดงค่า-->
+                        <input type="text" id="show_tag" class="form-control">
+
+                    </div>
+
+                    <!--โพสของผู้ใช้งาน ช่อง textarea สำหรับรับค่าที่โพส มาแสดง-->
+                    <div class="post">
+                        <textarea type="text" class="post_"></textarea>
+                    </div>
+
+                    <!--การกดไลค์และแสดงความคิดเห็น-->
+                    <div id="activity" class="row" style="width: 22%;">
+
+                        <!--ปุ่มไลค์-->
+                        <div id="like" class="col">
+                            <button id="like_button" type="button">
+                                <ion-icon class="like_logo" name="heart-outline" size="small"></ion-icon>
+                            </button>
+                        </div>
+
+                        <!--input สำหรับแสดงจำนวนไลค์-->
+                        <div id="num_like" class="col">
+                            <input type="text" class="num_l"></input>
+                        </div>
+
+                        <!--ปุ่มคอมเมนท์-->
+                        <div id="comment" class="col">
+                            <button id="comment_button" type="button">
+                                <ion-icon class="comment_logo" name="chatbubble-outline" size="small"></ion-icon>
+                            </button>
+                        </div>
+
+                        <!--input สำหรับแสดงจำนวนคอมเมนท์-->
+                        <div id="num_comment" class="col">
+                            <input type="text" class="num_c"></input>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--เส้นขีด-->
+            <hr>
+
+        </div>
+
+        <!---------------------------กล่องขวา--------------------------->
+        <div class="box_right" style="width: 20%;" align="center">
+
+            <div id="box" class="col">
+
+                <!--หัวข้อ-->
+                <div class="col">
+                    <b>Trends for you</b>
+                </div>
+
+                <!--เส้นขีด-->
+                <hr>
+
+                <!--trends ที่ขึ้นแนะนำ-->
+                <div id="trends" class="col" align="start">
+                    <div class="trend_1">
+                        <a href="">#ความรัก</a>
+                    </div>
+                    <hr>
+                    <div class="trend_2">
+                        <a href="">#ทั่วไป</a>
+                    </div>
+                    <hr>
+                    <div class="trend_3">
+                        <a href="">#การงาน</a>
+                    </div>
+                    <hr>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--footer แถบสีเหลือง สำหรับเข้าสู่ระบบและสมัครสมาชิก-->
+    <div id="footer">
+
+        <!--ข้อความ-->
+        <div class="text">
+            <h5>คุณยังไม่ได้เข้าสู่ระบบ</h5>
+            <h5>มีบัญชีผู้ใช้แล้วหรือยัง?</h5>
+        </div>
+
+        <!--ปุ่มเข้าสู่ระบบและสมัครสมาชิก-->
+        <div class="logandre">
+            <button type="button" class="log" data-bs-toggle="modal" data-bs-target="#LOGIN">เข้าสู่ระบบ</button>
+            <button type="button" class="regis" data-bs-toggle="modal" data-bs-target="#REGISTER">สมัคร</button>
+        </div>
+
+    </div>
+
+    <!--script ใช้ footer-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+<!--เอา modal ไว้นอก Body-->
+
+<!-- Modal_LOGIN -->
+<div class="modal fade" id="LOGIN" tabindex="-1" aria-labelledby="LOGIN" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="width: 500px;">
+
+            <!--ปุ่มปิด-->
+            <div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!--ข้อความเข้าสู่ระบบ-->
+            <div style="display: flex; justify-content: center;">
+                <h5 class="modal-title" id="LOGIN"><b>เข้าสู่ระบบ</b></h5>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="login-wrapper">
+                    <form class="form">
+
+                        <div class="input-group"> <!-- input email-->
+                            <input type="email" name="loginUser" id="loginUser" required />
+                            <label for="loginUser">E-mail</label>
+                        </div>
+
+                        <div class="input-group"> <!-- input password-->
+                            <input type="password" name="loginPassword" id="loginPassword" required />
+                            <label for="loginPassword">Password</label>
+                        </div>
+                        <div class="text_re">
+                            <label for="Register">You don't have an account?
+                                <a data-bs-toggle="modal" data-bs-target="#REGISTER" data-bs-dismiss="modal"
+                                    class="tooltip-test" title="สมัครสมาชิก" type="button"> สมัครสมาชิก</a>
+                            </label>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+
+            <!--ปุ่มยืนยันและยกเลิก-->
+            <form class="button" style="display: flex; justify-content: center;">
+                <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal"
+                    style="margin-right: 20px;">ยกเลิก</button>
+                <button type="submit" id="ok" class="submit-btn btn btn-primary">ยืนยัน</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal_REGISTER -->
+<div class="modal fade" id="REGISTER" tabindex="-1" aria-labelledby="REGISTER" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <!--ปุ่มปิด-->
+            <div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!--ข้อความสมัครสมาชิก-->
+            <div style="display: flex; justify-content: center;">
+                <h5 class="modal-title" id="LOGIN"><b>สมัครสมาชิก</b></h5>
+            </div>
+            <div class="modal-body">
+
+                <div class="register-wrapper">
+
+                    <form class="form">
+
+                        <div class="input-group"> <!-- input username-->
+                            <input type="text" name="loginUser" id="loginUser" required />
+                            <label for="loginUser">Username</label>
+                        </div>
+
+                        <div class="input-group"> <!-- input name-->
+                            <input type="text" name="loginUser" id="loginUser" required />
+                            <label for="loginUser">ชื่อ</label>
+                        </div>
+
+                        <div class="input-group"> <!-- input surname-->
+                            <input type="text" name="loginUser" id="loginUser" required />
+                            <label for="loginUser">นามสกุล</label>
+                        </div>
+
+                        <div class="input-group"> <!-- input tel-->
+                            <input type="tel" name="loginPassword" id="loginPassword" required />
+                            <label for="loginPassword">เบอร์โทรศัพท์</label>
+                        </div>
+
+                        <div class="input-group"> <!-- input email-->
+                            <input type="email" name="loginPassword" id="loginPassword" required />
+                            <label for="loginPassword">E-mail</label>
+                        </div>
+
+                        <div class="input-group"> <!-- input password-->
+                            <input type="password" name="loginPassword" id="loginPassword" required />
+                            <label for="loginPassword">Password</label>
+                        </div>
+
+                        <div class="text_log">
+                            <label for="LOGIN">You already have an account?
+                                <a data-bs-toggle="modal" data-bs-target="#LOGIN" data-bs-dismiss="modal"
+                                    class="tooltip-test" title="เข้าสู่ระบบ" type="button"> เข้าสู่ระบบ</a>
+                            </label>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+
+            <!--ปุ่มยืนยันและยกเลิก-->
+            <form class="button" style="display: flex; justify-content: center;">
+                <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal"
+                    style="margin-right: 20px;">ยกเลิก</button>
+                <button type="submit" id="ok" class="submit-btn btn btn-primary">ยืนยัน</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</html>
