@@ -1,0 +1,89 @@
+{% extends "navbar.html" %}
+
+    {% block css %}
+    {% load static %}
+    <title>Approve</title>
+    <link rel="stylesheet" href="{% static 'static/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'ksadmin/css/styles.css' %}">
+    {% endblock %}
+  
+    {% block content %}
+    <div class="content_head">
+        <div class="topic">
+            <h5>MACHINE</h5>
+        </div>
+
+        <div class="items_right">
+          <form action="" method="post">
+            {% csrf_token %}
+          <div class="filter">
+            <div class="input_">
+              <div class="mc_num">
+                <input type="text" class="num" placeholder="Machine Number" name="machine_numberS">
+              </div>
+              <div class="mc_name">
+                <input type="text" class="name" placeholder="Machine Name" name="machine_nameS">
+              </div>
+            </div>
+            <div class="dropdown_search">
+              <div class="mc_type">
+                <select name="machine_typeS" id="type">
+                  <option value="0" >Machine Type</option>
+                  {% for mactype in machine_types %}
+                    <option value="{{mactype.id}}" >{{mactype.description}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+              <div class="company_name">
+                <select name="company_nameS" id="name">
+                  <option value="0" >Company Name</option>
+                  {% for comlist in companyList %}
+                    <option value="{{comlist.id}}" >{{comlist.name_company}}</option>
+                  {% endfor %}
+                </select>
+              </div>
+              <div class="search">
+                <button class="search_button" type="submit">Search</button>
+              </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="show_button">
+            <div class="showItems">
+              <a>All</a>
+              <div class="show_items">{{ numofmachine }}</div>
+              <a>machine</a>
+            </div>
+  
+            <!-- <div class="addnew">
+              <button class="addnew_button">Add New Machine</button>
+            </div> -->
+          </div>
+          
+        </div>
+    </div>
+
+    <div class="content_main">
+      {% for machine in Generalmachine %}
+        <div class="machine_list">
+            <div class="show_list">
+                <b>Machine Number : {{ machine.machine_number }}</b><br>
+                <a>Machine Name : {{ machine.machine_name }}</a><br>
+                <a>Machine Type : {{ machine.machine_type_name }}</a><br>
+                <a>Company Name : {{ machine.company_name }}</a><br>
+            </div>
+            <div class="button_func">
+              <div class="edit">
+                <button class="edit_button">Edit</button>
+              </div>
+              <div class="del">
+                <button class="del_button">Delete</button>
+              </div>
+            </div>
+        </div>
+      {% endfor %}
+    </div>
+
+
+    {% endblock %}
