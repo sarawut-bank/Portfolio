@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+   <meta charset="utf-8">
+   <title>Attribute Ops</title>
+   <link rel="stylesheet" href="../Static/css/style.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+<body>
+
+   <!--*****************ส่วนของ navbar*****************-->
+   <nav>
+      <div class="menu-icon">
+         <span class="fas fa-bars"></span>
+      </div>
+      <div class="logo">
+         <img src="../Static/images/logo.png" alt="" width="100" height="60">
+      </div>
+      <div class="nav-items">
+         <li><a href="#">HOME</a></li>
+         <li><a href="#">ABOUT</a></li>
+         <li><a href="#">CONTACT</a></li>
+         <li><a href="#">FAQ</a></li>
+      </div>
+      <div class="profile-icon">
+         <a href="#">
+            <img src="../Static/images/profile.png" width="40" height="40">
+         </a>
+      </div>
+      <div class="cancel-icon">
+         <span class="fas fa-times"></span>
+      </div>
+
+      <div class="nav-items" style="display: flex; justify-content: end;">
+         <button type="button" class="buttonlog">LOGIN</button>
+      </div>
+   </nav>
+   <!--*************************************************-->
+
+
+
+   <!--*****************ส่วนของ BODY ( รูปภาพ )*****************-->
+   <div class="container">
+      <div class="box1">
+         <div class="img-slider">
+            <div class="slide active">
+               <img class="image-fluid" src="../Static/images/image1.png" alt="">
+            </div>
+            <div class="slide">
+               <img class="image-fluid" src="../Static/images/image2.png" alt="">
+
+            </div>
+            <div class="navigation">
+               <div class="btn active"></div>
+               <div class="btn"></div>
+            </div>
+         </div>
+      </div>
+      <!--*********************************************************-->
+
+
+      <!--*****************ส่วนของ BODY *****************-->
+      <div class="box2">
+         <div class="body1">
+
+            <h1 class="first">ATTRIBUTE OPS</h1>
+
+            <div class="seconbox">
+               <h4 class="secon">CREATE DEVELOP APPLICATIONS AND PERSONNEL</h4>
+            </div>
+
+            <div class="textbox">
+               <a class="text1">เราคือทีมทำ Software - Applications ขนาดเล็กไปจนถึงขนาดกลาง
+                  เราเปิดรับผู้ที่มีความสนใจในการเขียนเว็บไซต์ด้วยภาษาที่มีความนิยมเป็นอันดับต้นๆของโลก คือ Python
+                  ที่เป็นภาษาที่เข้าใจง่ายและสามารถ
+                  พัฒนาต่อยอดไปได้ในทุกสายงานในปัจจุบัน</a>
+            </div>
+         </div>
+
+         <div class="body2">
+            <img class="Atblogo" src="../Static/images/attributeops logo.png">
+         </div>
+      </div>
+   </div>
+
+
+
+
+
+
+
+
+   <!--**********************************************-->
+
+
+   <!--**********script ของส่วน navbar**********-->
+   <script>
+      const menuBtn = document.querySelector(".menu-icon span");
+      const profileBtn = document.querySelector(".profile-icon");
+      const cancelBtn = document.querySelector(".cancel-icon");
+      const items = document.querySelector(".nav-items");
+
+      menuBtn.onclick = () => {
+         items.classList.add("active");
+         menuBtn.classList.add("hide");
+         profileBtn.classList.add("hide");
+         cancelBtn.classList.add("show");
+      }
+      cancelBtn.onclick = () => {
+         items.classList.remove("active");
+         menuBtn.classList.remove("hide");
+         profileBtn.classList.remove("hide");
+         cancelBtn.classList.remove("show");
+         form.classList.remove("active");
+         cancelBtn.style.color = "#ff3d00";
+      }
+
+   </script>
+   <!--******************************************-->
+
+
+
+   <!--**********script ของส่วนรูปภาพสไลด์**********-->
+   <script type="text/javascript">
+      var slides = document.querySelectorAll('.slide');
+      var btns = document.querySelectorAll('.btn');
+      let currentSlide = 1;
+
+      var manualNav = function (manual) {
+         slides.forEach((slide) => {
+            slide.classList.remove('active');
+
+            btns.forEach((btn) => {
+               btn.classList.remove('active');
+            });
+         });
+
+         slides[manual].classList.add('active');
+         btns[manual].classList.add('active');
+      }
+
+      btns.forEach((btn, i) => {
+         btn.addEventListener("click", () => {
+            manualNav(i);
+            currentSlide = i;
+         });
+      });
+
+      var repeat = function (activeClass) {
+         let active = document.getElementsByClassName('active');
+         let i = 1;
+
+         var repeater = () => {
+            setTimeout(function () {
+               [...active].forEach((activeSlide) => {
+                  activeSlide.classList.remove('active');
+               });
+
+               slides[i].classList.add('active');
+               btns[i].classList.add('active');
+               i++;
+
+               if (slides.length == i) {
+                  i = 0;
+               }
+               if (i >= slides.length) {
+                  return;
+               }
+               repeater();
+            }, 5000);
+         }
+         repeater();
+      }
+      repeat();
+   </script>
+   <!--******************************************-->
+
+
+</body>
+
+</html>
