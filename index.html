@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/4e287f0439.js" crossorigin="anonymous"></script>
+    <script src="/scripts.js"></script>
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <nav>
+        <div class="menu-icon">
+            <span class="fas fa-bars"></span>
+        </div>
+        <div class="header">
+            <h3>PORTFOLIO</h3>
+        </div>
+        <div class="nav-items">
+            <li><a href="#section1">HOME</a></li>
+            <li><a href="#section2">ABOUT</a></li>
+            <li><a href="#section3">EDUCATION</a></li>
+            <li><a href="#section4">EXPERIENCE</a></li>
+        </div>
+        <div class="profile-icon" hidden>
+            <a href="#">
+                <img src="../images/profile.png" width="40" height="40">
+            </a>
+        </div>
+        <div class="cancel-icon">
+            <span class="fas fa-times"></span>
+        </div>
+    </nav>
+    <main>
+        <section id="section1" class="section1">
+            <div class="suggest">
+                <div class="top_suggest">
+                    <div class="hello">
+                        <b>Hello, My name is</b>
+                    </div>
+                    <div class="name">
+                        <i>Sarawut Phimphisan</i>
+                    </div>
+                </div>
+
+                <div class="itme">
+                    <p>I'm Developer & UX/UI Design</p>
+                </div>
+
+                <div class="des_suggest">
+                    <p>You can call me Bank. I have a strong interest in technology. Programming is my favorite thing to do. Another thing I like is the design. Haha. Learning new things is
+                    something I enjoy. To stay up-to-date with the current world. I'm no good, but I think I can do it. If we put in our
+                    best effort on that thing.</p>
+                </div>
+                <a href="#section2"><button class="aboutme glow-button">About Me</button></a>
+
+            </div>
+            <div class="images">
+                <img id="me" src="images/itme.png" alt="">
+            </div>
+        </section>
+
+        <section id="section2" class="section2">
+            <div class="tap1">
+                <div class="about">
+                    <div class="head">
+                        <b>About Me</b>
+                    </div>
+                    <div class="content">
+                        <a>Name : Sarawut</a><br>
+                        <a>Surename : Phimphisan</a><br>
+                        <a>Nickname : Bank</a><br>
+                        <a>Birthday : 01/11/2001</a><br>
+                        <a>Age : 21</a><br>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="head">
+                        <b>Skill</b>
+                    </div>
+                    <div class="content">
+                        <a>• HTML, CSS, Bootstrap, JavaScript</a><br>
+                        <a>• Python, PHP, C, C++, SQL</a><br>
+                        <a>• Django, Flask Web Framework</a><br>
+                        <a>• Photoshop, Figma</a><br>
+                        <a>• Microsoft Word, Excel, PowerPoint</a><br>
+                    </div>
+                </div>
+            </div>
+            <div class="tap2">
+                <div class="img_me">
+                    <img src="/images/me2.png" alt="">
+                </div>
+                <div class="contact">
+                    <div class="head">
+                        <b>Contact</b>
+                    </div>
+                    <div class="content">
+                        <a><i class="fa-solid fa-phone" style="color: #212121;"></i> 092-738-1260</a><br>
+                        <a><i class="fa-solid fa-envelope" style="color: #212121;"></i> sarawutforrwork@gmail.com</a><br>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="section3" class="section3">
+            <div class="highschool">
+                <div class="headtopic">
+                    <b>High School</b>
+                </div>
+                <div class="content_">
+                    <a>study at : </a>
+                    <a style="color: #FFB800;">Benjamanusorn School</a><br>
+                    <a>Career and Technology Computer</a><br>
+                    <a>GPAX : 3.77</a>
+                </div>
+                <div class="img">
+                    <img src="/images/me3.png" alt="">
+                </div>
+            </div>
+            <div class="bacdegree">
+                <div class="headtopic">
+                    <b>Bachelor's degree</b>
+                </div>
+                <div class="content_">
+                    <a>study at : </a>
+                    <a style="color: #FFB800;">Kasembundit University</a><br>
+                    <a>Faculty of Engineering Computer Engineering</a><br>
+                    <a>GPAX : 3.48</a>
+                </div>
+                <div class="img">
+                    <img src="/images/me4.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section id="section4" class="section4">
+            <div class="topic">
+                <h4>Work Experience</h4>
+            </div>
+
+            <div class="content_ex">
+                <div class="work1">
+                    <div class="img_work">
+                        <img src="/images/work1/work1_cover.png" alt="">
+                    </div>
+                    <div class="name_ex">
+                        <b>Asset Management System</b>
+                    </div>
+                    <div class="button_read">
+                        <button onclick="work1()">Read More</button>
+                    </div>
+                </div>
+                <div class="work2">
+                    <div class="img_work">
+                        <img src="/images/work2/work2_cover.png" alt="">
+                    </div>
+                    <div class="name_ex">
+                        <b>Attribute Ops Website</b>
+                    </div>
+                    <div class="button_read">
+                        <button onclick="work2()">Read More</button>
+                    </div>
+                </div>
+                <div class="work3">
+                    <div class="img_work">
+                        <img src="/images/work3/work3_cover.png" alt="">
+                    </div>
+                    <div class="name_ex">
+                        <b>Twitter Website</b>
+                    </div>
+                    <div class="button_read">
+                        <button onclick="work3()">Read More</button>
+                    </div>
+                </div>
+                <div class="work4">
+                    <div class="img_work">
+                        <img src="/images/work4/work4_cover.png" alt="">
+                    </div>
+                    <div class="name_ex">
+                        <b>KS (IOT & Web Mobile)</b>
+                        <br>
+                    </div>
+                    <div class="button_read">
+                        <button onclick="work4()">Read More</button>
+                    </div>
+                </div>
+                <div class="work5">
+                    <div class="img_work">
+                        <img src="/images/work5/work5_cover.png" alt="">
+                    </div>
+                    <div class="name_ex">
+                        <b>MiniProject_WebPHP</b>
+                        <br>
+                    </div>
+                    <div class="button_read">
+                        <button onclick="work5()">Read More</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <h4>Code Example</h4>
+                <a href="https://github.com/sarawut-bank/Portfolio.git"
+                    target="_blank">https://github.com/sarawut-bank/Portfolio.git</a>
+            </div>
+
+            <div id="modal1" class="modal1">
+                <div class="content_details">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <div class="headtop">
+                        <a>Asset Management System</a>
+                    </div>
+                    <div class="slideshow-container">
+
+                        <div class="mySlides">
+                            <img src="/images/work1/1.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="/images/work1/2.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="/images/work1/3.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="/images/work1/4.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="/images/work1/5.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="/images/work1/6.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides">
+                            <img src="/images/work1/7.png" style="width:100%">
+                        </div>
+
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+
+                    </div>
+
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                        <span class="dot" onclick="currentSlide(6)"></span>
+                        <span class="dot" onclick="currentSlide(7)"></span>
+                    </div>
+
+                    <div class="desc">
+                        <a>Responsible for website design, create a website and front end development.</a><br>
+                        <a>Code Example :</a>
+                        <a href="https://github.com/sarawut-bank/Portfolio/tree/Assest-Management-System"
+                            target="_blank">https://github.com/sarawut-bank/Portfolio.git</a>
+                    </div>
+                </div>
+
+                <script>
+                    let slideIndex = 1;
+
+                    showSlides(slideIndex);
+
+
+                    function plusSlides(n) {
+                        showSlides(slideIndex += n);
+                    }
+
+                    function currentSlide(n) {
+                        showSlides(slideIndex = n);
+                    }
+
+                    function showSlides(n) {
+                        let i;
+                        let slides = document.getElementsByClassName("mySlides");
+                        let dots = document.getElementsByClassName("dot");
+                        if (n > slides.length) { slideIndex = 1 }
+                        if (n < 1) { slideIndex = slides.length }
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex - 1].style.display = "block";
+                        dots[slideIndex - 1].className += " active";
+                    }
+                </script>
+
+            </div>
+
+            <div id="modal2" class="modal2">
+                <div class="content_details">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <div class="headtop">
+                        <a>Attribute Ops Website Project</a>
+                    </div>
+                    <div class="slideshow-container">
+
+                        <div class="mySlides2">
+                            <img src="/images/work2/1.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides2">
+                            <img src="/images/work2/2.png" style="width:100%">
+                        </div>
+
+                        <a class="prev" onclick="plusSlides2(-1)">❮</a>
+                        <a class="next" onclick="plusSlides2(1)">❯</a>
+
+                    </div>
+
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide2(1)"></span>
+                        <span class="dot" onclick="currentSlide2(2)"></span>
+                    </div>
+
+                    <div class="desc">
+                        <a>Responsible for website design, create a website.</a><br>
+                        <a>Code Example :</a>
+                        <a href="https://github.com/sarawut-bank/Portfolio/tree/Attribute-Ops"
+                            target="_blank">https://github.com/sarawut-bank/Portfolio.git</a>
+                    </div>
+                </div>
+
+                <script>
+                    let slideIndex2 = 1;
+
+                    showSlides2(slideIndex2);
+
+
+                    function plusSlides2(n) {
+                        showSlides2(slideIndex2 += n);
+                    }
+
+                    function currentSlide2(n) {
+                        showSlides2(slideIndex2 = n);
+                    }
+
+                    function showSlides2(n) {
+                        let i;
+                        let slides = document.getElementsByClassName("mySlides2");
+                        let dots = document.getElementsByClassName("dot");
+                        if (n > slides.length) { slideIndex2 = 1 }
+                        if (n < 1) { slideIndex2 = slides.length }
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex2 - 1].style.display = "block";
+                        dots[slideIndex2 - 1].className += " active";
+                    }
+                </script>
+
+            </div>
+
+            <div id="modal3" class="modal3">
+                <div class="content_details">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <div class="headtop">
+                        <a>Twitter Website ( Education )</a>
+                    </div>
+                    <div class="slideshow-container">
+
+                        <div class="mySlides3">
+                            <img src="/images/work3/1.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides3">
+                            <img src="/images/work3/2.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides3">
+                            <img src="/images/work3/3.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides3">
+                            <img src="/images/work3/4.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides3">
+                            <img src="/images/work3/5.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides3">
+                            <img src="/images/work3/6.png" style="width:100%">
+                        </div>
+
+                        <a class="prev" onclick="plusSlides3(-1)">❮</a>
+                        <a class="next" onclick="plusSlides3(1)">❯</a>
+
+                    </div>
+
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide3(1)"></span>
+                        <span class="dot" onclick="currentSlide3(2)"></span>
+                        <span class="dot" onclick="currentSlide3(3)"></span>
+                        <span class="dot" onclick="currentSlide3(4)"></span>
+                        <span class="dot" onclick="currentSlide3(5)"></span>
+                        <span class="dot" onclick="currentSlide3(6)"></span>
+                    </div>
+
+                    <div class="desc">
+                        <a>Responsible for website design, create a website.</a><br>
+                        <a>Code Example :</a>
+                        <a href="https://github.com/sarawut-bank/Portfolio/tree/Twitter-(-education-)"
+                            target="_blank">https://github.com/sarawut-bank/Portfolio.git</a>
+                    </div>
+                </div>
+
+                <script>
+                    let slideIndex3 = 1;
+
+                    showSlides3(slideIndex3);
+
+
+                    function plusSlides3(n) {
+                        showSlides3(slideIndex3 += n);
+                    }
+
+                    function currentSlide3(n) {
+                        showSlides3(slideIndex3 = n);
+                    }
+
+                    function showSlides3(n) {
+                        let i;
+                        let slides = document.getElementsByClassName("mySlides3");
+                        let dots = document.getElementsByClassName("dot");
+                        if (n > slides.length) { slideIndex3 = 1 }
+                        if (n < 1) { slideIndex3 = slides.length }
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex3 - 1].style.display = "block";
+                        dots[slideIndex3 - 1].className += " active";
+                    }
+                </script>
+
+            </div>
+
+            <div id="modal4" class="modal4">
+                <div class="content_details">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <div class="headtop">
+                        <a>KS (IOT & Web Mobile)</a>
+                    </div>
+                    <div class="slideshow-container">
+
+                        <div class="mySlides4">
+                            <img src="/images/work4/1.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides4">
+                            <img src="/images/work4/2.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides4">
+                            <img src="/images/work4/3.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides4">
+                            <img src="/images/work4/4.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides4">
+                            <img src="/images/work4/5.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides4">
+                            <img src="/images/work4/6.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides4">
+                            <img src="/images/work4/7.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides4">
+                            <img src="/images/work4/8.png" style="width:100%">
+                        </div>
+
+                        <a class="prev" onclick="plusSlides4(-1)">❮</a>
+                        <a class="next" onclick="plusSlides4(1)">❯</a>
+
+                    </div>
+
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide4(1)"></span>
+                        <span class="dot" onclick="currentSlide4(2)"></span>
+                        <span class="dot" onclick="currentSlide4(3)"></span>
+                        <span class="dot" onclick="currentSlide4(4)"></span>
+                        <span class="dot" onclick="currentSlide4(5)"></span>
+                        <span class="dot" onclick="currentSlide4(6)"></span>
+                        <span class="dot" onclick="currentSlide4(7)"></span>
+                        <span class="dot" onclick="currentSlide4(8)"></span>
+                    </div>
+
+                    <div class="desc">
+                        <a>Responsible for website design, create
+                            a website and full stack development.This project used Django Framework.</a><br>
+                        <a>Code Example :</a>
+                        <a href="https://github.com/sarawut-bank/Portfolio/tree/KS"
+                            target="_blank">https://github.com/sarawut-bank/Portfolio.git</a>
+                    </div>
+                </div>
+
+                <script>
+                    let slideIndex4 = 1;
+
+                    showSlides4(slideIndex4);
+
+
+                    function plusSlides4(n) {
+                        showSlides4(slideIndex4 += n);
+                    }
+
+                    function currentSlide4(n) {
+                        showSlides4(slideIndex4 = n);
+                    }
+
+                    function showSlides4(n) {
+                        let i;
+                        let slides = document.getElementsByClassName("mySlides4");
+                        let dots = document.getElementsByClassName("dot");
+                        if (n > slides.length) { slideIndex4 = 1 }
+                        if (n < 1) { slideIndex4 = slides.length }
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex4 - 1].style.display = "block";
+                        dots[slideIndex4 - 1].className += " active";
+                    }
+                </script>
+
+            </div>
+
+
+            <div id="modal5" class="modal5">
+                <div class="content_details">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <div class="headtop">
+                        <a>MiniProject_WebPHP</a>
+                    </div>
+                    <div class="slideshow-container">
+
+                        <div class="mySlides5">
+                            <img src="/images/work5/1.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides5">
+                            <img src="/images/work5/2.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides5">
+                            <img src="/images/work5/3.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides5">
+                            <img src="/images/work5/4.png" style="width:100%">
+                        </div>
+
+                        <div class="mySlides5">
+                            <img src="/images/work5/5.png" style="width:100%">
+                        </div>
+
+                        <a class="prev" onclick="plusSlides5(-1)">❮</a>
+                        <a class="next" onclick="plusSlides5(1)">❯</a>
+
+                    </div>
+
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide5(1)"></span>
+                        <span class="dot" onclick="currentSlide5(2)"></span>
+                        <span class="dot" onclick="currentSlide5(3)"></span>
+                        <span class="dot" onclick="currentSlide5(4)"></span>
+                        <span class="dot" onclick="currentSlide5(5)"></span>
+                    </div>
+
+                    <div class="desc">
+                        <a>Responsible for website design, create
+                            a website and full stack development.This project used PHP.</a><br>
+                        <a>Code Example :</a>
+                        <a href="https://github.com/sarawut-bank/Portfolio/tree/MiniProject_WebPHP"
+                            target="_blank">https://github.com/sarawut-bank/Portfolio.git</a>
+                    </div>
+                </div>
+
+                <script>
+                    let slideIndex5 = 1;
+
+                    showSlides5(slideIndex5);
+
+
+                    function plusSlides5(n) {
+                        showSlides5(slideIndex5 += n);
+                    }
+
+                    function currentSlide5(n) {
+                        showSlides5(slideIndex5 = n);
+                    }
+
+                    function showSlides5(n) {
+                        let i;
+                        let slides = document.getElementsByClassName("mySlides5");
+                        let dots = document.getElementsByClassName("dot");
+                        if (n > slides.length) { slideIndex5 = 1 }
+                        if (n < 1) { slideIndex5 = slides.length }
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex5 - 1].style.display = "block";
+                        dots[slideIndex5 - 1].className += " active";
+                    }
+                </script>
+
+            </div>
+
+
+
+
+
+        </section>
+    </main>
+
+    <script>
+        const menuBtn = document.querySelector(".menu-icon span");
+        const profileBtn = document.querySelector(".profile-icon");
+        const cancelBtn = document.querySelector(".cancel-icon");
+        const items = document.querySelector(".nav-items");
+
+        menuBtn.onclick = () => {
+            items.classList.add("active");
+            menuBtn.classList.add("hide");
+            profileBtn.classList.add("hide");
+            cancelBtn.classList.add("show");
+        }
+        cancelBtn.onclick = () => {
+            items.classList.remove("active");
+            menuBtn.classList.remove("hide");
+            profileBtn.classList.remove("hide");
+            cancelBtn.classList.remove("show");
+            form.classList.remove("active");
+            cancelBtn.style.color = "#ff3d00";
+        }
+        items.onclick = () => {
+            items.classList.remove("active");
+            menuBtn.classList.remove("hide");
+            profileBtn.classList.remove("hide");
+            cancelBtn.classList.remove("show");
+            form.classList.remove("active");
+        }
+
+    </script>
+
+</body>
+
+
+</html>
