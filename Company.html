@@ -1,0 +1,89 @@
+{% extends "navbar.html" %}
+
+{% block css %}
+{% load static %}
+<title>Company</title>
+<link rel="stylesheet" href="{% static 'ksadmin/css/bootstrap.min.css' %}">
+
+<link rel="stylesheet" href="{% static 'ksadmin/css/companystyles.css' %}">
+<script type="text/JavaScript" src="{% static 'ksadmin/js/company.js' %}"></script>
+<link rel="stylesheet" href="{% static 'static/bootstrap/css/bootstrap.min.css' %}">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+{% endblock %}
+{% block content %}
+{% csrf_token %}
+<div class="content">
+    <div class="content_head">
+
+        <div class="items_left">
+            <h5>Company</h5>
+        </div>
+
+        <div class="items_right">
+            <!-- <form action="">
+                <select name="type" id="companyValue" hidden>
+                    <option value="0" selected>All</option>
+                    {% for companyData_ in companyData %}
+                    <option value="{{ companyData_.id }}">{{ companyData_.name_company }}</option>
+                    {% endfor %}
+                </select>
+            </form> -->
+
+            <button id="addNewCompany" onclick="addnewCompanyButton()">AddNewCompany</button>
+
+            <div id="modalAddnew" class="modalAddnew">
+                <div class="modal-contentAddnew">
+                    <div class="header">
+                        <b>ADD NEW COMPANY</b>
+                        <span class="close" onclick="closeModal()">&times;</span>
+                    </div>
+                    <br>
+                    <form action="">
+                        <div class="input-data">
+                            <div class="topic">
+                                <a>Company Name : </a>
+                            </div>
+                            <input class="form-control" type="text" id="newCompanyName" required>
+                        </div>
+                        <div class="input-data">
+                            <div class="topic">
+                                <a>Company Abbreviation : </a>
+                            </div>
+                            <input class="form-control" type="text" id="newCompanyAbb" required>
+                        </div>
+                        <div class="input-data">
+                            <div class="topic">
+                                <a>Company Address : </a>
+                            </div>
+                            <textarea class="form-control" name="" id="newCompanyAddress" rows="3" required></textarea>
+                        </div>
+                        <div class="buttonAdd">
+                            <button class="addnew_button" onclick="addNewDataCompany()">Add New</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="showItems">
+                <a>All</a>
+                <div class="show_items"></div>
+                <a>Company</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content_main">
+    </div>
+
+    <div id="myModal" class="modal">
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            pageload();
+        });
+    </script>
+</div>
+{% endblock %}

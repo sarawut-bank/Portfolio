@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content {
+    display: block;
+}
+
+.content_head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+}
+
+.content_head .items_right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#addNewCompany {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    background: #092879;
+    color: #ffffff;
+}
+
+#addNewCompany:hover {
+    background: #041d5b;
+}
+
+.modalAddnew {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-contentAddnew {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    border-radius: 10px;
+    transition: all .5s;
+}
+
+.input-data{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.input-data .topic{
+    width: 200px;
+}
+
+.input-data input,
+.input-data textarea{
+    width: 100%;
+}
+
+.buttonAdd{
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+}
+
+.buttonAdd .addnew_button{
+    padding: 3px 15px;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    background: #092879;
+}
+
+.buttonAdd .addnew_button:hover{
+    background: #041d5b;
+}
+
+.content_head .items_right .showItems {
+    display: flex;
+}
+
+.content_head .items_right .showItems .show_items {
+    width: 50px;
+    height: 22px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    color: #092879;
+    background: #EBEBEB;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.content_main {
+    display: block;
+    background: #ffffff;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 1px 5px #878787;
+}
+
+.content_main .machine_list {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    background: #EFEFEF;
+    border-radius: 7px;
+}
+
+.content_main .machine_list .button_func {
+    display: flex;
+    align-items: center;
+}
+
+.content_main .machine_list .button_func .del {
+    margin-left: 20px;
+}
+
+.content_main .machine_list .button_func .view .view_button {
+    width: 120px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 20px;
+    border: none;
+    color: #ffffff;
+    background: #092879;
+}
+
+.content_main .machine_list .button_func .view .view_button:hover {
+    background: #041d5b;
+}
+
+.content_main .machine_list .button_func .del .del_button {
+    width: 120px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 20px;
+    border: none;
+    color: #ffffff;
+    background: #FE3E3E;
+}
+
+.content_main .machine_list .button_func .del .del_button:hover {
+    background: #ac1f1f;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    transition: all .5s;
+}
+
+.modal-content .box_details {
+    padding: 5px 6px 5px 6px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    font-size: 16px;
+}
+
+.modal-content #mainTd {
+    width: 200px;
+}
+
+.modal-content input {
+    width: 40%;
+    padding: 0 10px;
+}
+
+.close {
+    display: flex;
+    justify-content: end;
+    float: right;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.edit_button {
+    background: #b6a628dc;
+    color: #ffffff;
+    width: 80px;
+    height: 30px;
+    border: none;
+    border-radius: 7px;
+
+}
+
+.edit_button:hover {
+    background: #998b25dc;
+}
+
+.save_button {
+    background: #009c22;
+    color: #ffffff;
+    width: 80px;
+    height: 30px;
+    border: none;
+    border-radius: 7px;
+}
+
+.save_button:hover {
+    background: #17b338;
+}
+
+.modal-footer {
+    margin-top: 10px;
+}
+
+@media (max-width:1000px) {
+    .modal-content input {
+        width: 70%;
+    }
+}
+
+@media (max-width:767px) {
+
+    .content_main .machine_list .button_func {
+        display: block;
+        align-items: center;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .content_main .machine_list .button_func .del {
+        margin-left: 0px;
+        margin-top: 5px;
+    }
+
+    .content_main .machine_list .button_func .del .del_button {
+        width: 120px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+
+    .content_main .machine_list .button_func .view .view_button {
+        width: 120px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+
+    .modal-content {
+        width: 70%;
+    }
+
+    .modal-content input {
+        width: 50%;
+    }
+
+    .modal-contentAddnew {
+        width: 70%;
+    }
+
+}
+
+@media (max-width:570px) {
+    .content .content_head {
+        display: block;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .content_head .items_right {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .content_head .items_right .filter {
+        margin-right: 0;
+    }
+
+    .content_head .items_right .filter #type_request {
+        width: 150px;
+        font-size: 14px;
+    }
+
+    .filter #sr_code {
+        width: 150px;
+        font-size: 14px;
+    }
+
+    .content_head .items_right .showItems {
+        font-size: 14px;
+    }
+
+    .content_head .items_right .showItems .show_items {
+        height: 25px;
+        font-size: 16px;
+    }
+
+    .content_main .machine_list {
+        font-size: 14px;
+    }
+
+    .content_main .machine_list .button_func .del .del_button,
+    .content_main .machine_list .button_func .view .view_button {
+        width: 100px;
+    }
+
+    .modal-content {
+        width: 80%;
+    }
+
+    .modal-content input {
+        width: 80%;
+    }
+
+}
